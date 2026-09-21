@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "btech_ta": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

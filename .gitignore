@@ -1,0 +1,42 @@
+﻿## User excluded folders
+logic_building/
+
+## Compiled files & binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+
+## Visual Studio & VS Code cache / settings
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+## Build results / Output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Aa]rm/
+[Aa]rm64/
+[Xx]64/
+[Xx]86/
+build/
+dist/
+
+## NuGet packages
+*.nupkg
+packages/
+!**/packages.config
+
+## Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+## OS generated files
+.DS_Store
+Thumbs.db
