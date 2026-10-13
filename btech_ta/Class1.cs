@@ -4,13 +4,23 @@ using System.Text;
 
 namespace btech_ta
 {
-    class Employee //blueprint or template
+    abstract class Employee //blueprint or template
     {
+
         //it does not have any return type explicitly
         //must hae same name as class name
         //public test() { }
-       // public Employee() { }
-       
+        // public Employee() { }
+
+        abstract public void Show();//abstract method
+        //abstract
+        //highlighs the feaatures only
+        //abstract keyword used with class and method
+        //you cannot create object of abstract class
+        //within abstract class you can put data members,abstract methods,concrete methods(non-abstraact),constructors,etc..
+        //you can use abstract class as a parent class
+        //all the abstract methods must be implemented in the child class
+        //all the abstract method are implicitly virtual
         public string Name { get; set; }
         private int age;//data member
 
@@ -54,8 +64,29 @@ namespace btech_ta
             Console.WriteLine("Check method from Employee class");
         }
     }
-    class RegularEmployee : Employee //Level-1
+    interface IA
     {
+        void Test1();
+    }
+
+    interface IB
+    {
+        void Test1();
+        void Test2();
+
+    }
+    //interface  
+    
+    interface ITest
+    {
+        void Testing();
+    }
+    class RegularEmployee : Employee,ITest //Level-1
+    {
+        public void Testing()
+        {
+            Console.WriteLine("Testing method from ITest interface");
+        }
         //Data Members: from this class: 5
         //Data Members: from base class(Employee): 3
 
@@ -69,7 +100,10 @@ namespace btech_ta
         private double DA;
         private double PF;
         private double PT;
-
+        public override void Show()
+        {
+            Console.WriteLine("Show method from RegularEmployee class");
+        }
         public override void Display()
         {
             base.Display();
@@ -89,7 +123,7 @@ namespace btech_ta
     {
         public static void Main(string[] args)
         {
-            Employee e1 = new Employee();
+           /*  Employee e1 = new Employee();
             e1.Name = "Prem";
             e1.Dept = "CSE";
             e1.Age = 20;
@@ -101,17 +135,18 @@ namespace btech_ta
             e2.Dept = "IT";
             e2.Age = 32;
             e2.setSalary(60000);
-            e2.Display();
+            e2.Display(); 
 
 
             Employee e3 = new Employee();
             e3.Display();  //Employee
             e3.Check();  //Employee
-            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("--------------------------------------------------");*/
 
             RegularEmployee e4 = new RegularEmployee();
             e4.Display();  //RegularEmployee
             e4.Check();  //RegularEmployee
+            e4.Show();
             Console.WriteLine("--------------------------------------------------");
 
             Employee e5 = new RegularEmployee();
